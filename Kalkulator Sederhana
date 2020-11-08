@@ -1,0 +1,48 @@
+import math
+class kalkulator:
+    def tambah(a, b):
+        return a + b
+    def kurang(a, b):
+        return a - b
+    def kali(a, b):
+        return a * b
+    def bagi(a, b):
+        return a/b
+    def kuadrat(a):
+        return a**2
+    def akar(a):
+        return math.sqrt(a)
+kalkulator()
+
+print("MENU KALKULATOR\n")
+print("1. tambah")
+print("2. kurang")
+print("3. kali")
+print("4. bagi")
+print("5. kuadrat")
+print("6. akar")
+
+x = int(input("\nPilihan anda? = "))
+
+if x in (1, 2, 3, 4):
+    a = int(input("Masukkan angka pertama = "))
+    b = int(input("Masukkan angka kedua = "))
+    if x == 1:
+        print(a, "+", b, "=", tambah(a, b))
+    elif x == 2:
+        print(a, "-", b, "=", kurang(a, b))
+    elif x == 3:
+        print(a, "x", b, "=", kali(a, b))
+    elif x == 4:
+        print(a, "/", b, "=", bagi(a,b))
+elif x in (5, 6):
+    a = int(input("Masukkan angka = "))
+    if x == 5:
+        print("kuadrat dari", a, "=", kuadrat(a))
+    elif x == 6:
+        if a < 0:
+            print(a, "tidak ada akarnya")
+        else:
+            print("akar dari", a, "=", akar(a))
+else:
+    print("Input pilihan yang benar")
